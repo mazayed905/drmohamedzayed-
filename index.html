@@ -410,7 +410,24 @@
       }
     }
     
-</style>
+
+    /* =========================
+       Bilingual (AR/EN)
+    ==========================*/
+    html[data-lang="en"]{ direction:ltr; }
+    html[data-lang="en"] body{ letter-spacing:.1px; }
+    html[data-lang="en"] .title, 
+    html[data-lang="en"] h1, 
+    html[data-lang="en"] h2, 
+    html[data-lang="en"] h3,
+    html[data-lang="en"] p,
+    html[data-lang="en"] li,
+    html[data-lang="en"] .subtitle { text-align:left; }
+    html[data-lang="en"] .nav{ justify-content:flex-start; }
+    html[data-lang="en"] th, 
+    html[data-lang="en"] td{ text-align:left; }
+
+  </style>
 </head>
 
 <body>
@@ -426,21 +443,22 @@
       </div>
 
       <nav aria-label="التنقل">
-        <a href="#home" data-section="home" aria-current="true">الرئيسية</a>
-        <a href="#cv" data-section="cv">السيرة الذاتية</a>
-        <a href="#research" data-section="research">الأبحاث</a>
-        <a href="#teaching" data-section="teaching">التدريس</a>
-        <a href="#admin" data-section="admin">الإدارة والجودة</a>
-        <a href="#contact" data-section="contact">التواصل</a>
+        <a href="#home" data-section="home" aria-current="true"><span data-i18n="nav_home">الرئيسية</span></a>
+        <a href="#cv" data-section="cv"><span data-i18n="nav_cv">السيرة الذاتية</span></a>
+        <a href="#research" data-section="research"><span data-i18n="nav_research">الأبحاث</span></a>
+        <a href="#teaching" data-section="teaching"><span data-i18n="nav_teaching">التدريس</span></a>
+        <a href="#admin" data-section="admin"><span data-i18n="nav_admin">الإدارة والجودة</span></a>
+        <a href="#contact" data-section="contact"><span data-i18n="nav_contact">التواصل</span></a>
       </nav>
 
       <div class="actions">
         <div class="search" role="search" aria-label="بحث داخل الصفحة">
-          <input id="q" type="search" placeholder="بحث سريع داخل الصفحة…" autocomplete="off" />
+          <input id="q" type="search" placeholder="بحث سريع داخل الصفحة…" data-i18n-placeholder="search_ph" autocomplete="off" />
           <button class="btn" id="findBtn" title="بحث">⌕</button>
         </div>
         <button class="btn" id="printBtn" title="طباعة / PDF">🖨</button>
-        <button class="btn" id="themeBtn" title="تبديل الوضع">☾</button>
+                <button class="btn" id="langBtn" title="English / العربية">EN</button>
+<button class="btn" id="themeBtn" title="تبديل الوضع">☾</button>
       </div>
     </div>
   </div>
@@ -452,13 +470,13 @@
       <div class="hero">
         <div class="hero-left">
           <h1 class="title">د. محمد عبد الحميد فهمي زايد</h1>
-          <p class="subtitle">أستاذ مشارك – كلية التربية | عمادة شؤون الطلاب – جامعة الملك فيصل</p>
+          <p class="subtitle"><span data-i18n="hero_subtitle">أستاذ مشارك – كلية التربية | عمادة شؤون الطلاب – جامعة الملك فيصل</span></p>
 
           <div class="chips" aria-label="مجالات التخصص">
-            <span class="chip">علوم الرياضة والنشاط البدني</span>
-            <span class="chip">الجمباز والتمرينات والعروض</span>
-            <span class="chip">الجودة والاعتماد الأكاديمي</span>
-            <span class="chip">خدمات ودعم ذوي الإعاقة</span>
+            <span class="chip"><span data-i18n="chip_1">علوم الرياضة والنشاط البدني</span></span>
+            <span class="chip"><span data-i18n="chip_2">الجمباز والتمرينات والعروض</span></span>
+            <span class="chip"><span data-i18n="chip_3">الجودة والاعتماد الأكاديمي</span></span>
+            <span class="chip"><span data-i18n="chip_4">خدمات ودعم ذوي الإعاقة</span></span>
           </div>
 
           
@@ -470,14 +488,14 @@
             </video>
           </div>
 <div class="hero-cta">
-            <button class="btn primary" id="copyEmailBtn">نسخ البريد الرسمي</button>
-            <a class="btn" href="#cv">استعراض السيرة</a>
-            <a class="btn" href="#research">المنشورات</a>
-            <a class="btn" href="#contact">معلومات التواصل</a>
+            <button class="btn primary" id="copyEmailBtn"><span data-i18n="btn_copy_email">نسخ البريد الرسمي</span></button>
+            <a class="btn" href="#cv"><span data-i18n="btn_view_cv">استعراض السيرة</span></a>
+            <a class="btn" href="#research"><span data-i18n="btn_publications">المنشورات</span></a>
+            <a class="btn" href="#contact"><span data-i18n="btn_contact_info">معلومات التواصل</span></a>
           </div>
 
           <div class="stats" aria-label="إحصاءات سريعة">
-            <div class="stat"><div class="k">الدرجات العلمية</div><div class="v">4</div></div><div class="stat"><div class="k">المناصب الإدارية</div><div class="v">16</div></div><div class="stat"><div class="k">المقررات (بكالوريوس)</div><div class="v">45</div></div><div class="stat"><div class="k">بحوث دولية (Q1/Q2)</div><div class="v">6</div></div><div class="stat"><div class="k">نماذج دورات تدريبية</div><div class="v">24</div></div>
+            <div class="stat"><div class="k"><span data-i18n="stat_degrees">الدرجات العلمية</span></div><div class="v">4</div></div><div class="stat"><div class="k"><span data-i18n="stat_admin">المناصب الإدارية</span></div><div class="v">16</div></div><div class="stat"><div class="k"><span data-i18n="stat_courses">المقررات (بكالوريوس)</span></div><div class="v">45</div></div><div class="stat"><div class="k"><span data-i18n="stat_q1q2">بحوث دولية (Q1/Q2)</span></div><div class="v">6</div></div><div class="stat"><div class="k"><span data-i18n="stat_training">نماذج دورات تدريبية</span></div><div class="v">24</div></div>
           </div>
         </div>
 
@@ -493,7 +511,7 @@
             </div>
           </div>
           <div class="card">
-            <h3>المهام الحالية (ملخص)</h3>
+            <h3><span data-i18n="h3_current_responsibilities">المهام الحالية (ملخص)</span></h3>
             <ul class="list"><li>مشرف على مكتب الجودة بعمادة شؤون الطلاب بقرار رئيس جامعة الملك فيصل رقم 50447 وتاريخ 4/11/1441هـ.</li><li>مشرف على مكتب ذوي الإعاقة بعمادة شؤون الطلاب بقرار رئيس جامعة الملك فيصل رقم 50447 وتاريخ 4/11/1441هـ.</li><li>الإشراف العام والمباشر على مكتب الجودة ومكتب ذوي الإعاقة.</li><li>إعداد خطة عمل والعمل على تنفيذها لمكتب الجودة ومكتب ذوي الإعاقة.</li><li>وضع خطة تطويرية للعمادة والعمل بها حسب استراتيجية الجامعة، وما يستجد في حينه.</li><li>حصر وإعداد عدد طلبة ذوي الإعاقة بالجامعة وإعداد تقرير بجميع الحالات، وفتح ملف لكل حالة، ومتابعة الطلبة واحوالهم والإشراف على تفعيل نادي طلبة ذوي الإعاقة.</li><li>المتابعة الدورية مع موظفي العمادة لإعداد التقارير الشهرية والسنوية وذلك حسب توجيهات إدارة الجامعة وإدارة التخطيط المالي والميزانية بالتنسيق مع مدير الشؤون الإدارية والمالية بالعمادة.</li><li>التعاون مع كافة الإدارات والأقسام بالعمادة بما يحقق الأهداف العامة للعمادة والجامعة.</li><li>تنفيذ ما يطلب من قبل العميد والوكيل المختص من اعمال تطلب في حينه، بما يحقق المصلحة العامة.</li></ul>
           </div>
         </aside>
@@ -502,12 +520,12 @@
 
     <!-- CV -->
     <section id="cv" class="panel reveal" aria-label="السيرة الذاتية">
-      <h2>السيرة الذاتية الأكاديمية</h2>
+      <h2><span data-i18n="h2_cv">السيرة الذاتية الأكاديمية</span></h2>
       <p class="muted">بيانات ومحتوى السيرة مبنية على الملف المعتمد.</p>
 
       <div class="grid2">
         <div class="card">
-          <h3>بيانات الاتصال</h3>
+          <h3><span data-i18n="h3_contact_details">بيانات الاتصال</span></h3>
           <ul class="list">
             <li><b>الهاتف:</b> 0580673992</li>
             <li><b>هاتف المكتب:</b> 0135896361</li>
@@ -518,13 +536,13 @@
         </div>
 
         <div class="card">
-          <h3>ملخص تعريفي</h3>
+          <h3><span data-i18n="h3_profile">ملخص تعريفي</span></h3>
           <p class="muted">
             أستاذ مشارك عمادة شؤون الطلاب في مجال علوم الرياضة والجمباز، مع خبرة أكاديمية وإدارية في الجودة والاعتماد
             وخدمات الطلبة، بما في ذلك تطوير المؤشرات والتقارير ودعم وتمكين الطلبة من ذوي الإعاقة.
           </p>
           <div class="sep"></div>
-          <h3>إجادة اللغات</h3>
+          <h3><span data-i18n="h3_lang">إجادة اللغات</span></h3>
           <ul class="list"><li>TOEFL course during the period from 9-7-2004 to 19-10-2004 and passed the final exam with general grade  (V.GOOD)</li></ul>
         </div>
       </div>
@@ -533,7 +551,7 @@
         <summary>الدرجات العلمية <span class="chev">⌄</span></summary>
         <div class="table-wrap ">
 <table>
-<thead><tr><th>الدرجة</th><th>السنــــــة</th><th>التخصص العام</th><th>التخصص الدقيق</th><th>عنــــــــــوان الرسالة</th><th>اسم الجامعة</th><th>الدولـــــة</th><th>تاريخ الحصول عليها</th></tr></thead>
+<thead><tr><th data-i18n="th_degree">الدرجة</th><th data-i18n="th_year">السنــــــة</th><th data-i18n="th_major">التخصص العام</th><th data-i18n="th_minor">التخصص الدقيق</th><th data-i18n="th_thesis_title">عنــــــــــوان الرسالة</th><th data-i18n="th_university">اسم الجامعة</th><th data-i18n="th_country">الدولـــــة</th><th>تاريخ الحصول عليها</th></tr></thead>
 <tbody>
 <tr><td>بكالوريوس</td><td>2002</td><td>التربية البدنية</td><td>شعبة عامة</td><td>-------</td><td>كلية التربية الرياضية  للبنين - جامعة<br>الأسكندرية</td><td>جمهورية مصر العربية</td><td>2002 يونيو</td></tr>
 <tr><td>ماجستير</td><td>2007</td><td>التربية البدنية</td><td>تدريب التمرينات والجمباز</td><td>تأثير التدريب العقلي في تحسين أداء مهارة الشقلبة الخلفية فى الجمباز</td><td>كلية التربية الرياضية  للبنين - جامعة<br>الأسكندرية</td><td>جمهورية مصر العربية</td><td>27/3/2007</td></tr>
@@ -549,7 +567,7 @@
         <summary>الخبرات والمناصب الإدارية <span class="chev">⌄</span></summary>
         <div class="table-wrap ">
 <table>
-<thead><tr><th>م</th><th>المنصب</th><th>الجهة</th><th>الدولة</th><th>تاريخ تقلد المنصب</th></tr></thead>
+<thead><tr><th data-i18n="th_no">م</th><th data-i18n="th_position">المنصب</th><th data-i18n="th_entity">الجهة</th><th data-i18n="th_country">الدولة</th><th data-i18n="th_start">تاريخ تقلد المنصب</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>عضو فريق العمل بوحدة ضمان الجودة والاعتماد بكلية التربية الرياضية والمعتمد من جامعة الإسكندرية.</td><td>كلية التربية الرياضية</td><td>مصر</td><td>2010</td></tr>
 <tr><td>2</td><td>مشرف الإرشاد الأكاديمي بكلية التربية الرياضية جامعة الإسكندرية.</td><td>كلية التربية الرياضية</td><td>مصر</td><td>2011</td></tr>
@@ -577,11 +595,11 @@
         <summary>عضوية اللجان (دولية ومحلية) <span class="chev">⌄</span></summary>
         <div class="grid2">
           <div class="card">
-            <h3>اللجان الدولية</h3>
+            <h3><span data-i18n="h3_intl_committees">اللجان الدولية</span></h3>
             <ul class="list"><li>عضو اللجنة العلمية للمؤتمر العلمي الدولي الثالث بعنوان علوم الرياضة ودورها في خدمة المجتمع تحت شعار (الرؤى المستقبلية) المقام بجامعة طرابلس بدولة ليبيا في الفترة 25-26/10/2020م.</li><li>عضو اللجنة الفنية للمؤتمر العلمي الدولي الثامن لعلوم التربية البد نية والرياضة- كلية التربية الرياضية-جامعة الإسكندرية - في الفترة من 5 – 7 اكتوبر2004.</li><li>عضو ممثل لكلية التربية الرياضية جامعة الإسكندرية في المؤتمر الدولي مؤتمر شارك TAKE PART عن الشباب والرياضة في مصر برعاية المجلس الثقافي البريطاني BRITISH COUNCIL 2012</li><li>THE 4TH ICHPER .SD MIDDLE EAST REGIONAL CONGRESS-FACULTY OF SPORT EDUCATION-ABOQIR-ALEXANDRIA UNIVERISTY-EGYPT-2008</li><li>AFRICA INTERNATIONAL SPORT CONVENTION (CISA)2009 HOSTED BY THE FACULTY OF SPORT EDUCATION-ABUQIR-ALEXANDRIA,EGYPT IN THE PERIOD 12-15 FEBRUARY,2009</li></ul>
           </div>
           <div class="card">
-            <h3>اللجان المحلية</h3>
+            <h3><span data-i18n="h3_local_committees">اللجان المحلية</span></h3>
             <ul class="list"><li>على مستوى الجامعة</li><li>عضو لجنة تسويق هوية كلية التربية جامعة الملك فيصل المشكلة</li><li>بقرار عميد الكلية رقم 47609 لمدة عاما دراسيا اعتبارا من الفصل الدراسي الثاني من العام الجامعي 1440/1441 هـ.</li><li>على مستوي القسم</li><li>عضو لجنة الاعلام والعلاقات العامة بقسم التربية البدنية جامعة الملك فيصل2017 -2020.</li><li>عضو لجنة الجودة بقسم التربية البدنية جامعة الملك فيصل 2017.</li><li>عضو لجنة الاختبارات العملية بقسم التربية البدنية جامعة الملك فيصل2019-2020.</li><li>عضو لجنة الارشاد الأكاديمي بقسم التربية البدنية جامعة الملك فيصل2019/2020.</li></ul>
           </div>
         </div>
@@ -591,11 +609,11 @@
         <summary>المؤلفات والكتب + تنسيق المقررات <span class="chev">⌄</span></summary>
         <div class="grid2">
           <div class="card">
-            <h3>الكتب والمؤلفات</h3>
+            <h3><span data-i18n="h3_books">الكتب والمؤلفات</span></h3>
             <ul class="list"><li>- أسس تدريب الجمباز للفرقة الاولي 2014 كتاب جامعي مع أعضاء هيئة التدريس بقسم تدريب التمرينات والجمباز، كلية التربية، جامعة الإسكندرية.</li><li>-أسس تدريب الجمباز للفرقة الثالثة 2015 كتاب جامعي مع أعضاء هيئة التدريس بقسم تدريب التمرينات والجمباز، كلية التربية، جامعة الإسكندرية.</li><li>-أسس تدريب الجمباز للفرقة الثانية 2016 كتاب جامعي مع أعضاء هيئة التدريس بقسم تدريب التمرينات والجمباز، كلية التربية، جامعة الإسكندرية.</li><li>- الأسس النظرية والعملية في الجمباز 2017 الدار العالمية للنشر جامعة الملك فيصل. وموجود بمكتبة الجامعة</li><li>- الأسس النظرية والعملية في التمرينات 2023 الدار العالمية للنشر جاري تكملته والانتهاء منه قريبا ان شاء الله.</li><li>- الأسس النظرية والعملية في العروض 2023 الدار العالمية للنشر جاري تكملته والانتهاء منه قريبا ان شاء الله.</li></ul>
           </div>
           <div class="card">
-            <h3>تنسيق المقررات</h3>
+            <h3><span data-i18n="h3_coord">تنسيق المقررات</span></h3>
             <ul class="list"><li>منسق الأسس النظرية والعملية لجمباز 1 جامعة الملك فيصل بالمملكة العربية السعودية.</li><li>منسق الأسس النظرية والعملية لتمرينات 1 جامعة الملك فيصل بالمملكة العربية السعودية.</li><li>منسق الأسس النظرية والعملية للعروض جامعة الملك فيصل بالمملكة العربية السعودية.</li></ul>
           </div>
         </div>
@@ -606,7 +624,7 @@
         <p class="muted">ملحوظة: لدى الدكتور 193 دورة تدريبية حتى 2022 — فيما يلي عينة موثقة من الملف.</p>
         <div class="table-wrap ">
 <table>
-<thead><tr><th>الدورة</th><th>الفترة الزمنية</th><th>مدة الفترة</th><th>مجال الدورة</th><th>مكان الإنعقاد</th><th>الدولة</th></tr></thead>
+<thead><tr><th>الدورة</th><th data-i18n="th_period">الفترة الزمنية</th><th data-i18n="th_duration">مدة الفترة</th><th data-i18n="th_field">مجال الدورة</th><th data-i18n="th_location">مكان الإنعقاد</th><th>الدولة</th></tr></thead>
 <tbody>
 <tr><td>1- التدريس الفعال</td><td>فبراير<br>2007</td><td>4 ايام</td><td>التدريس</td><td>مركز تنمية القدرات بجامعة الإسكندرية</td><td>مصر</td></tr>
 <tr><td>2- مهارات الاتصال</td><td>مارس<br>2007</td><td>3 ايام</td><td>التدريس</td><td>مركز تنمية القدرات بجامعة الإسكندرية</td><td>مصر</td></tr>
@@ -642,22 +660,22 @@
         <summary>مشاركات مهنية (مؤتمرات – عروض – تحكيم) <span class="chev">⌄</span></summary>
         <div class="grid2">
           <div class="card">
-            <h3>المؤتمرات العلمية</h3>
+            <h3><span data-i18n="h3_confs">المؤتمرات العلمية</span></h3>
             <ul class="list"><li>المؤتمر الإقليمي الرابع للمجلس الدولي للصحة والتربية البدنية والترويح والرياضة والتعبير الحركي لمنطقة الشرق الأوسط 2008.</li><li>المؤتمر العلمي الدولي العاشر لعلوم التربية البد نية والرياضة-كلية التربية الرياضية-جامعة الإسكندرية-فى الفترة من23-24 اكتوبر2013.</li><li>المؤتمر العلمي الأول لقسم التمرينات والجمباز والتعبير الحركي – جامعة الزقازيق -استراتيجيات التطوير وجودة الأداء (رؤية مستقبلية)</li></ul>
           </div>
           <div class="card">
-            <h3>العروض الرياضية</h3>
+            <h3><span data-i18n="h3_shows">العروض الرياضية</span></h3>
             <p class="muted" style="margin:0 0 6px;">تصميم/تنفيذ:</p>
             <ul class="list"><li>عرض جامعة الإسكندرية للكليات الغير متخصصة عام 2010م</li><li>المشاركة في بطولة الجمهورية للعروض الرياضية للكليات المتخصصة عام 2012 م</li><li>افتتاح الأولمبياد الرابع للجامعات المصرية المقام بالإسكندرية يوم 5/9/2012 م.</li></ul>
             <p class="muted" style="margin:10px 0 6px;">تدريب/تنفيذ:</p>
             <ul class="list"><li>تدريب العرض الرياضي الخاص بافتتاح أولمبياد المدارس المصرية المقام بالإسكندرية يوم 20 / 7 / 2004م</li><li>المشاركة في بطولة الجمهورية للعروض الرياضية للكليات المتخصصة عام 2007 م والحصول على المركز الأول للبنين</li><li>افتتاح الأولمبياد الأول للجامعات المصرية المقام بالإسكندرية يوم 26 /7/ 2008 م</li><li>المشاركة في بطولة الجمهورية للعروض الرياضية للكليات المتخصصة عام 2008 م والحصول على المركز الثاني للبنين.</li><li>افتتاح الأولمبياد الثاني للجامعات المصرية المقام بالإسكندرية يوم 20/7/2009 م.</li><li>المشاركة في الاحتفال بيوم الشهيد والمحاربين القدامى المقام بالإسكندرية يوم 23/3/2010 م.</li><li>المشاركة في بطولة الجمهورية للعروض الرياضية للكليات المتخصصة عام 2012 م والحصول على المركز الثاني للبنين</li></ul>
           </div>
           <div class="card">
-            <h3>التحكيم</h3>
+            <h3><span data-i18n="h3_review">التحكيم</span></h3>
             <ul class="list"><li>بطولة مهرجان العروض الرياضية للمعاهد الأزهرية على مستوي الجمهورية 2012</li><li>بطولة مهرجان العروض الرياضية للمعاهد الأزهرية على مستوي الجمهورية 2014</li><li>بطولة مهرجان العروض الرياضية للمعاهد الأزهرية على مستوي الجمهورية 2015</li></ul>
           </div>
           <div class="card">
-            <h3>أنشطة وخبرات أخرى</h3>
+            <h3><span data-i18n="h3_other">أنشطة وخبرات أخرى</span></h3>
             <ul class="list"><li>مشارك في تنظيم وتقديم العديد من الفاعليات (الدورات التدريبية، الندوات، وورش العمل، والملتقيات) المنظمة من وحدة ضمان الجودة بكلية التربية الرياضية جامعة الإسكندرية.</li><li>مشارك في أعداد وتوصيف المقررات الدراسية وإعداد المصفوفات بالبرامج التعليمية بكلية التربية الرياضية جامعة الإسكندرية.</li><li>مشارك في تنظيم الأنشطة الطلابية لطلاب كلية التربية الرياضية من عام 2003 وحتى 2016 بكلية التربية الرياضية جامعة الإسكندرية.</li><li>مشارك في الإشراف علي سير الدراسة من عام 2002 وحتى 2016 بكلية التربية الرياضية جامعة الإسكندرية.</li><li>التوجيه والإشراف على العديد من طلاب الكلية في الإرشاد الأكاديمي من عام 2008-2009 وحتى 2016 بكلية التربية الرياضية جامعة الإسكندرية.</li><li>مشارك في تنظيم وتقديم العديد من الفاعليات (الدورات التدريبية، الندوات، وورش العمل، والملتقيات) المنظمة من قسم التربية البدنية بكلية التربية جامعة الملك فيصل.</li><li>إعداد وتوصيف العديد من المقررات الدراسية وإعداد المصفوفات بالبرامج التعليمية بقسم التربية البدنية بكلية التربية جامعة الملك فيصل.</li><li>التوجيه والإشراف على العديد من طلاب الإرشاد الأكاديمي من عام 2017-وحتى 2020 بكلية التربية قسم التربية البدنية جامعة الملك فيصل.</li><li>إقامة ملتقى علمي بجامعة الملك فيصل 1439، بعنوان&quot; المستحدثات العلمية في الجمباز الفني&quot;.</li><li>إدارة ندوة علمية 2019 بجامعة الملك فيصل، بعنوان &quot; الأخطاء وفرص تعرض اللاعبين للإصابة- رياضات الدفاع عن النفس كمثال&quot;.</li><li>إدارة ملتقي الارشاد الأكاديمي 2020، بعنوان &quot; اللقاء التعريفي والتسجيل المبكر للإرشاد الأكاديمي &quot;</li><li>إدارة ورشة تثقيفية بهوية الجامعة بمناسبة أسبوع الأخضر الوطني، بعنوان &quot; أدوار كلية التربية في ضوء الهوية الجديدة للجامعة &quot;</li><li>عضو لجنة التخطيط الاستراتيجي لمشروع تطوير منظومة الأنشطة الطلابية 5/1</li><li>عضو لجنة التخطيط الاستراتيجي لمشروع تطوير منظومة الخدمات الطلابية 5/2</li><li>عضو لجنة التخطيط الاستراتيجي لمشروع تعزيز تنافسية خريجي جامعة الملك فيصل 5/3</li><li>عضو لجنة التخطيط الاستراتيجي لمشروع تعزيز انتماء الخريج للجامعة 3/7</li></ul>
           </div>
         </div>
@@ -666,7 +684,7 @@
 
     <!-- RESEARCH -->
     <section id="research" class="panel reveal" aria-label="الأبحاث">
-      <h2>الأبحاث والمنشورات</h2>
+      <h2><span data-i18n="h2_research">الأبحاث والمنشورات</span></h2>
 
       <details open>
         <summary>بحوث دولية محكمة (Q1/Q2) <span class="chev">⌄</span></summary>
@@ -760,7 +778,7 @@
           <summary>عرض الجدول كاملًا <span class="chev">⌄</span></summary>
           <div class="table-wrap ">
 <table>
-<thead><tr><th>م</th><th>عنوان البحث</th><th>جهة النشر</th><th>تاريخ النشر</th></tr></thead>
+<thead><tr><th>م</th><th data-i18n="th_paper_title">عنوان البحث</th><th data-i18n="th_publisher">جهة النشر</th><th data-i18n="th_pub_date">تاريخ النشر</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>تأثير التصور العقلي في تحسين مستوى الأداء بالعروض الرياضية لدي طلاب كلية التربية الرياضية</td><td>مجلة نظريات وتطبيقات ، العدد الثامن والسبعون ، كلية التربية الرياضية للبنين ، جامعة الإسكندرية</td><td>مارس 2013</td></tr>
 <tr><td>1</td><td>تأثير التصور العقلي في تحسين مستوى الأداء بالعروض الرياضية لدي طلاب كلية التربية الرياضية</td><td>مجلة نظريات وتطبيقات ، العدد الثامن والسبعون ، كلية التربية الرياضية للبنين ، جامعة الإسكندرية</td><td>مارس 2013</td></tr>
@@ -798,13 +816,13 @@
 
     <!-- TEACHING -->
     <section id="teaching" class="panel reveal" aria-label="التدريس">
-      <h2>الخبرات التدريسية والإشراف</h2>
+      <h2><span data-i18n="h2_teaching">الخبرات التدريسية والإشراف</span></h2>
 
       <details open>
         <summary>تدريس الدراسات العليا <span class="chev">⌄</span></summary>
         <div class="table-wrap ">
 <table>
-<thead><tr><th>م</th><th>اسم المقرر</th><th>المرحلة</th><th>الكلية</th><th>الجامعة</th><th>الدولة</th><th>السنة</th></tr></thead>
+<thead><tr><th>م</th><th data-i18n="th_course">اسم المقرر</th><th>المرحلة</th><th>الكلية</th><th data-i18n="th_university2">الجامعة</th><th>الدولة</th><th data-i18n="th_year">السنة</th></tr></thead>
 <tbody>
 <tr><td></td><td>مقرر تطبيقات في تدريب الجمباز الأرضي</td><td>الدبلوم</td><td>التربية الرياضية</td><td>الإسكندرية</td><td>مصر</td><td>2014-2015</td></tr>
 <tr><td></td><td>مقرر تطبيقات تكنولوجية في الجمباز الأرضي</td><td>الدبلوم</td><td>التربية الرياضية</td><td>الإسكندرية</td><td>مصر</td><td>2014-2015</td></tr>
@@ -877,7 +895,7 @@
         <summary>الإشراف العلمي ومناقشة الرسائل <span class="chev">⌄</span></summary>
         <div class="table-wrap ">
 <table>
-<thead><tr><th>م</th><th>اسم الرسالة</th><th>الدرجة</th><th>تاريخ المناقشة</th><th>تاريخ الاعتماد</th></tr></thead>
+<thead><tr><th>م</th><th data-i18n="th_thesis">اسم الرسالة</th><th>الدرجة</th><th data-i18n="th_defense">تاريخ المناقشة</th><th data-i18n="th_approval">تاريخ الاعتماد</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>أثر جمباز الألعاب والموانع في النمو البدني والحركي لأطفال الحضانة من 3 : 4 سنوات</td><td>ماجستير</td><td>15/3/2016</td><td>29/5/2016</td></tr>
 <tr><td>2</td><td>تقويم منظومة اللجنة الفنية بالاتحاد الليبي للجمباز في ضوء معايير الجودة الشاملة</td><td>دكتوراه</td><td>23/12/2014</td><td>22/1/2015</td></tr>
@@ -893,19 +911,19 @@
 
     <!-- ADMIN -->
     <section id="admin" class="panel reveal" aria-label="الإدارة والجودة">
-      <h2>الإدارة والجودة وخدمات ذوي الإعاقة</h2>
+      <h2><span data-i18n="h2_admin">الإدارة والجودة وخدمات ذوي الإعاقة</span></h2>
 
       <div class="grid2">
         <div class="card">
-          <h3>مجال العمل الحالي</h3>
+          <h3><span data-i18n="h3_current_role">مجال العمل الحالي</span></h3>
           <ul class="list"><li>مشرف على مكتب الجودة بعمادة شؤون الطلاب بقرار رئيس جامعة الملك فيصل رقم 50447 وتاريخ 4/11/1441هـ.</li><li>مشرف على مكتب ذوي الإعاقة بعمادة شؤون الطلاب بقرار رئيس جامعة الملك فيصل رقم 50447 وتاريخ 4/11/1441هـ.</li></ul>
           <div class="sep"></div>
-          <h3>مهام العمل الحالي</h3>
+          <h3><span data-i18n="h3_current_duties">مهام العمل الحالي</span></h3>
           <ul class="list"><li>الإشراف العام والمباشر على مكتب الجودة ومكتب ذوي الإعاقة.</li><li>إعداد خطة عمل والعمل على تنفيذها لمكتب الجودة ومكتب ذوي الإعاقة.</li><li>وضع خطة تطويرية للعمادة والعمل بها حسب استراتيجية الجامعة، وما يستجد في حينه.</li><li>حصر وإعداد عدد طلبة ذوي الإعاقة بالجامعة وإعداد تقرير بجميع الحالات، وفتح ملف لكل حالة، ومتابعة الطلبة واحوالهم والإشراف على تفعيل نادي طلبة ذوي الإعاقة.</li><li>المتابعة الدورية مع موظفي العمادة لإعداد التقارير الشهرية والسنوية وذلك حسب توجيهات إدارة الجامعة وإدارة التخطيط المالي والميزانية بالتنسيق مع مدير الشؤون الإدارية والمالية بالعمادة.</li><li>التعاون مع كافة الإدارات والأقسام بالعمادة بما يحقق الأهداف العامة للعمادة والجامعة.</li><li>تنفيذ ما يطلب من قبل العميد والوكيل المختص من اعمال تطلب في حينه، بما يحقق المصلحة العامة.</li></ul>
         </div>
 
         <div class="card">
-          <h3>ملخص محاور العمل</h3>
+          <h3><span data-i18n="h3_work_overview">ملخص محاور العمل</span></h3>
           <ul class="list">
             <li><b>الجودة:</b> بناء المؤشرات، التقارير، المخاطر، المتابعة، ومعايير NCAAA.</li>
             <li><b>التخطيط الاستراتيجي:</b> مشاريع الجامعة ومؤشرات (GreenMetric / Times).</li>
@@ -938,7 +956,7 @@
           <summary>برنامج آفاق التواصل (نماذج دورات) <span class="chev">⌄</span></summary>
           <div class="table-wrap ">
 <table>
-<thead><tr><th>ج</th><th>اسم الدورة</th><th>المدرب</th><th>التاريخ</th><th>الوقت</th><th>المكان</th><th>تاريخ بدء التقديم والتسجيل</th></tr></thead>
+<thead><tr><th data-i18n="th_group">ج</th><th data-i18n="th_training">اسم الدورة</th><th data-i18n="th_trainer">المدرب</th><th data-i18n="th_date">التاريخ</th><th data-i18n="th_time">الوقت</th><th data-i18n="th_place">المكان</th><th>تاريخ بدء التقديم والتسجيل</th></tr></thead>
 <tbody>
 <tr><td>البرنامج العام</td><td>الملتقي التعريفي بوحدة ذوي الاحتياجات الخاصة.</td><td>د/ محمد عبد الحميد زايد<br>أستاذ علوم الرياضة المشارك ومشرف وحدة ذوي الإعاقة</td><td>2020</td><td>ساعتان</td><td>القاعات المجهزة لعمادة شؤون الطلاب (التعليم عن بعد، قاعات التدريب)</td><td>٢١ / ١ /١٤٤٢<br>ولمدة ثلاث أيام<br>(شهادات حضور)</td></tr>
 <tr><td>البرنامج العام</td><td>مهارات التواصل الفعال للطلاب ذوي الاحتياجات الخاصة.</td><td>د/ عبد الرحيم فتحي إسماعيل<br>أستاذ المناهج وطرق التدريس المشارك</td><td>2020</td><td>ساعتان</td><td>القاعات المجهزة لعمادة شؤون الطلاب (التعليم عن بعد، قاعات التدريب)</td><td>٢٨ / ١ /١٤٤٢<br>ولمدة ثلاث أيام<br>(شهادات حضور)</td></tr>
@@ -956,7 +974,7 @@
           <summary>برنامج "لَهُم" (نماذج دورات) <span class="chev">⌄</span></summary>
           <div class="table-wrap ">
 <table>
-<thead><tr><th>م</th><th>الفئة المستهدفة</th><th>اسم الدورة</th><th>المدرب</th><th>التاريخ</th><th>الوقت</th><th>المكان</th></tr></thead>
+<thead><tr><th>م</th><th data-i18n="th_target">الفئة المستهدفة</th><th>اسم الدورة</th><th>المدرب</th><th>التاريخ</th><th>الوقت</th><th>المكان</th></tr></thead>
 <tbody>
 <tr><td></td><td>ذوي الإعاقة</td><td>(التواصل الفعال) ضمن برنامج لَهُم</td><td>د. عمرو بدران</td><td></td><td></td><td>عمادة شؤون الطلاب</td></tr>
 <tr><td></td><td>ذوي الإعاقة</td><td>الخريطة الذهنية لعلم قواعد العربية لذوي الاحتياجات الخاصة</td><td>د. علي خليفة</td><td></td><td></td><td>عمادة شؤون الطلاب</td></tr>
@@ -985,10 +1003,10 @@
 
     <!-- CONTACT -->
     <section id="contact" class="panel reveal" aria-label="التواصل">
-      <h2>التواصل</h2>
+      <h2><span data-i18n="h2_contact">التواصل</span></h2>
       <div class="grid2">
         <div class="card">
-          <h3>قنوات التواصل</h3>
+          <h3><span data-i18n="h3_channels">قنوات التواصل</span></h3>
           <ul class="list">
             <li><b>الجوال:</b> 0580673992</li>
             <li><b>المكتب:</b> 0135896361</li>
@@ -996,16 +1014,16 @@
             <li><b>البريد:</b> <span dir="ltr">MOHAMMEDZAYED@YAHOO.COM</span></li>
             <li><b>المؤسسة:</b> جامعــة الملك فيصل – عمادة شؤون الطلاب</li>
           </ul>
-          <a class="pill" href="mailto:MAZAYED@KFU.EDU.SA">إرسال بريد</a>
+          <a class="pill" href="mailto:MAZAYED@KFU.EDU.SA"><span data-i18n="btn_send_email">إرسال بريد</span></a>
         </div>
 
         <div class="card">
-          <h3>روابط سريعة</h3>
-          <p class="muted" style="margin-top:0;">يمكنك طباعة السيرة أو نسخ بيانات التواصل بضغطة واحدة.</p>
+          <h3><span data-i18n="quick_links">روابط سريعة</span></h3>
+          <p class="muted" style="margin-top:0;"><span data-i18n="quick_links_desc">يمكنك طباعة السيرة أو نسخ بيانات التواصل بضغطة واحدة.</span></p>
           <div class="hero-cta" style="margin-top:12px;">
-            <button class="btn" onclick="window.print()">🖨 طباعة / PDF</button>
-            <a class="btn" href="#home">⬆ العودة للأعلى</a>
-            <button class="btn primary" id="copyAllBtn">نسخ بيانات التواصل</button>
+            <button class="btn" onclick="window.print()">🖨 <span data-i18n="btn_print_pdf">طباعة / PDF</span></button>
+            <a class="btn" href="#home">⬆ <span data-i18n="btn_back_top">العودة للأعلى</span></a>
+            <button class="btn primary" id="copyAllBtn"><span data-i18n="btn_copy_contact">نسخ بيانات التواصل</span></button>
           </div>
         </div>
       </div>
@@ -1282,6 +1300,436 @@ document.addEventListener('DOMContentLoaded', () => {
     wrap.appendChild(tbl);
   });
 });
+
+// =========================
+// Bilingual toggle (AR/EN)
+// =========================
+(function(){
+  const i18n = {
+    ar: {
+      nav_home: "الرئيسية",
+      nav_cv: "السيرة الذاتية",
+      nav_research: "الأبحاث",
+      nav_teaching: "التدريس",
+      nav_admin: "الإدارة والجودة",
+      nav_contact: "التواصل",
+
+      hero_subtitle: "أستاذ مشارك – كلية التربية | عمادة شؤون الطلاب – جامعة الملك فيصل",
+
+      chip_1: "علوم الرياضة والنشاط البدني",
+      chip_2: "الجمباز والتمرينات والعروض",
+      chip_3: "الجودة والاعتماد الأكاديمي",
+      chip_4: "خدمات ودعم ذوي الإعاقة",
+
+      btn_copy_email: "نسخ البريد الرسمي",
+      btn_view_cv: "استعراض السيرة",
+      btn_publications: "المنشورات",
+      btn_contact_info: "معلومات التواصل",
+
+      stat_degrees: "الدرجات العلمية",
+      stat_admin: "المناصب الإدارية",
+      stat_courses: "المقررات (بكالوريوس)",
+      stat_q1q2: "بحوث دولية (Q1/Q2)",
+      stat_training: "نماذج دورات تدريبية",
+
+      h2_cv: "السيرة الذاتية الأكاديمية",
+      h2_research: "الأبحاث والمنشورات",
+      h2_teaching: "الخبرات التدريسية والإشراف",
+      h2_admin: "الإدارة والجودة وخدمات ذوي الإعاقة",
+      h2_contact: "التواصل",
+
+      h3_profile: "ملخص تعريفي",
+      h3_contact_details: "بيانات الاتصال",
+      h3_current_role: "مجال العمل الحالي",
+      h3_current_duties: "مهام العمل الحالي",
+      h3_current_responsibilities: "المهام الحالية (ملخص)",
+      h3_work_overview: "ملخص محاور العمل",
+      h3_confs: "المؤتمرات العلمية",
+      h3_books: "الكتب والمؤلفات",
+      h3_coord: "تنسيق المقررات",
+      h3_intl_committees: "اللجان الدولية",
+      h3_local_committees: "اللجان المحلية",
+      h3_review: "التحكيم",
+      h3_lang: "إجادة اللغات",
+      h3_other: "أنشطة وخبرات أخرى",
+      h3_shows: "العروض الرياضية",
+      h3_channels: "قنوات التواصل",
+
+      quick_links: "روابط سريعة",
+      quick_links_desc: "يمكنك طباعة السيرة أو نسخ بيانات التواصل بضغطة واحدة.",
+      btn_print_pdf: "طباعة / PDF",
+      btn_back_top: "العودة للأعلى",
+      btn_copy_contact: "نسخ بيانات التواصل",
+      btn_send_email: "إرسال بريد",
+
+      search_ph: "بحث سريع داخل الصفحة…",
+
+      // Table headers (subset)
+      th_no: "م",
+      th_degree: "الدرجة",
+      th_year: "السنة",
+      th_major: "التخصص العام",
+      th_minor: "التخصص الدقيق",
+      th_thesis_title: "عنوان الرسالة",
+      th_paper_title: "عنوان البحث",
+      th_publisher: "جهة النشر",
+      th_pub_date: "تاريخ النشر",
+      th_university: "اسم الجامعة",
+      th_university2: "الجامعة",
+      th_country: "الدولة",
+      th_entity: "الجهة",
+      th_course: "اسم المقرر",
+      th_thesis: "اسم الرسالة",
+      th_defense: "تاريخ المناقشة",
+      th_approval: "تاريخ الاعتماد",
+      th_training: "اسم الدورة",
+      th_location: "مكان الإنعقاد",
+      th_field: "مجال الدورة",
+      th_duration: "مدة الفترة",
+      th_period: "الفترة الزمنية",
+      th_date: "التاريخ",
+      th_time: "الوقت",
+      th_place: "المكان",
+      th_target: "الفئة المستهدفة",
+      th_trainer: "المدرب",
+      th_start: "تاريخ تقلد المنصب",
+      th_position: "المنصب",
+      th_group: "ج"
+    },
+    en: {
+      nav_home: "Home",
+      nav_cv: "CV",
+      nav_research: "Research",
+      nav_teaching: "Teaching",
+      nav_admin: "Administration & Quality",
+      nav_contact: "Contact",
+
+      hero_subtitle: "Associate Professor – College of Education | Deanship of Student Affairs – King Faisal University",
+
+      chip_1: "Sport Sciences & Physical Activity",
+      chip_2: "Gymnastics, Exercises & Shows",
+      chip_3: "Quality & Academic Accreditation",
+      chip_4: "Disability Services & Support",
+
+      btn_copy_email: "Copy official email",
+      btn_view_cv: "View CV",
+      btn_publications: "Publications",
+      btn_contact_info: "Contact info",
+
+      stat_degrees: "Degrees",
+      stat_admin: "Administrative roles",
+      stat_courses: "Undergraduate courses",
+      stat_q1q2: "Q1/Q2 papers",
+      stat_training: "Training samples",
+
+      h2_cv: "Academic CV",
+      h2_research: "Research & Publications",
+      h2_teaching: "Teaching & Supervision",
+      h2_admin: "Administration, Quality & Disability Services",
+      h2_contact: "Contact",
+
+      h3_profile: "Profile summary",
+      h3_contact_details: "Contact details",
+      h3_current_role: "Current role",
+      h3_current_duties: "Current duties",
+      h3_current_responsibilities: "Key responsibilities",
+      h3_work_overview: "Work overview",
+      h3_confs: "Conferences",
+      h3_books: "Books",
+      h3_coord: "Course coordination",
+      h3_intl_committees: "International committees",
+      h3_local_committees: "Local committees",
+      h3_review: "Peer review",
+      h3_lang: "Languages",
+      h3_other: "Other activities",
+      h3_shows: "Sports shows",
+      h3_channels: "Channels",
+
+      quick_links: "Quick links",
+      quick_links_desc: "Print the CV or copy contact details with one click.",
+      btn_print_pdf: "Print / PDF",
+      btn_back_top: "Back to top",
+      btn_copy_contact: "Copy contact details",
+      btn_send_email: "Send email",
+
+      search_ph: "Quick search within this page…",
+
+      th_no: "#",
+      th_degree: "Degree",
+      th_year: "Year",
+      th_major: "General specialization",
+      th_minor: "Specific specialization",
+      th_thesis_title: "Thesis title",
+      th_paper_title: "Paper title",
+      th_publisher: "Publisher",
+      th_pub_date: "Publication date",
+      th_university: "University",
+      th_university2: "University",
+      th_country: "Country",
+      th_entity: "Entity",
+      th_course: "Course",
+      th_thesis: "Thesis",
+      th_defense: "Defense date",
+      th_approval: "Approval date",
+      th_training: "Training",
+      th_location: "Location",
+      th_field: "Field",
+      th_duration: "Duration",
+      th_period: "Period",
+      th_date: "Date",
+      th_time: "Time",
+      th_place: "Place",
+      th_target: "Target group",
+      th_trainer: "Trainer",
+      th_start: "Start date",
+      th_position: "Position",
+      th_group: "Group"
+    }
+  };
+
+  const langBtn = document.getElementById("langBtn");
+  
+  // =========================
+  // Full EN translation (AR->EN)
+  // Keeps old design 1:1 and preserves Arabic when switching back.
+  // =========================
+  const __origText = new WeakMap();
+
+  function __hasArabic(s){
+    return /[\u0600-\u06FF]/.test(s || "");
+  }
+
+  function __arabicDigitsToLatin(s){
+    const map = {'٠':'0','١':'1','٢':'2','٣':'3','٤':'4','٥':'5','٦':'6','٧':'7','٨':'8','٩':'9',
+                 '۰':'0','۱':'1','۲':'2','۳':'3','۴':'4','۵':'5','۶':'6','۷':'7','۸':'8','۹':'9'};
+    return (s||"").replace(/[٠-٩۰-۹]/g, d=>map[d]||d);
+  }
+
+  // Phrase-level replacements (longer first)
+  const __PHRASE = [
+    ["جامعة الملك فيصل", "King Faisal University"],
+    ["عمادة شؤون الطلاب", "Deanship of Student Affairs"],
+    ["جامعة الإسكندرية", "Alexandria University"],
+    ["كلية التربية الرياضية", "Faculty of Physical Education"],
+    ["كلية التربية", "College of Education"],
+    ["جمهورية مصر العربية", "Arab Republic of Egypt"],
+    ["المملكة العربية السعودية", "Saudi Arabia"],
+    ["ذوي الإعاقة", "Persons with Disabilities"],
+    ["وحدة ذوي الإعاقة", "Disability Unit"],
+    ["مكتب ذوي الإعاقة", "Disability Office"],
+    ["وحدة الجودة", "Quality Unit"],
+    ["مكتب الجودة", "Quality Office"],
+    ["الخطة الاستراتيجية", "Strategic Plan"],
+    ["الخطة التنفيذية", "Execution Plan"],
+    ["القياس والتقويم", "Measurement & Evaluation"],
+    ["التدريب الميداني", "Field Training"],
+    ["التمرينات", "Exercises"],
+    ["العروض الرياضية", "Sport Shows"],
+    ["الجمباز", "Gymnastics"],
+    ["التربية البدنية", "Physical Education"],
+    ["برنامج آفاق التواصل", "Afaq Al-Tawasul Program"],
+    ['برنامج "لَهُم"', '"For Them" Program'],
+    ["برنامج لهم", '"For Them" Program'],
+    ["ملتقى التمكين", "Empowerment Forum"],
+    ["متلازمة داون", "Down Syndrome"],
+    ["مؤشر تايمز", "Times indicator"],
+    ["جرين ماتريك", "GreenMetric"],
+    ["سجل المخاطر", "Risk Register"],
+    ["الأدلة والشواهد", "evidence and documentation"],
+    ["استطلاعات الرأي", "surveys"],
+    ["مؤشرات", "KPIs"],
+    ["المقررات", "courses"],
+    ["الدراسات العليا", "postgraduate studies"],
+    ["البكالوريوس", "undergraduate"],
+    ["أستاذ مشارك", "Associate Professor"],
+    ["أستاذ", "Professor"],
+    ["دكتوراه", "Ph.D."],
+    ["ماجستير", "M.Sc."],
+    ["بكالوريوس", "B.Sc."],
+  ];
+
+  const __WORD = {
+    "العمل":"Work",
+    "الدولة":"Country",
+    "التخصص":"Specialization",
+    "الجامعة":"University",
+    "الكلية":"College",
+    "القسم":"Department",
+    "الدرجة":"Degree",
+    "السنة":"Year",
+    "العنوان":"Title",
+    "المنصب":"Position",
+    "الجهة":"Entity",
+    "اللجان":"Committees",
+    "المؤتمرات":"Conferences",
+    "تحكيم":"Peer Reviewing",
+    "إعداد":"Preparation",
+    "تصميم":"Design",
+    "تنفيذ":"Implementation",
+    "متابعة":"Follow-up",
+    "تطوير":"Development",
+    "تحسين":"Improvement",
+    "تقرير":"Report",
+    "تقارير":"Reports",
+    "نصف":"Mid",
+    "سنوي":"Yearly",
+    "سنوية":"Annual",
+    "شهري":"Monthly",
+    "شكر":"Appreciation",
+    "إدارة":"Management",
+    "تشريح":"Anatomy",
+    "الصحة":"Health",
+    "اللياقة":"Fitness",
+    "مقرر":"Course",
+    "مستوي":"Level",
+    "أولى":"First",
+    "أول":"First",
+    "ثانية":"Second",
+    "ثالثة":"Third",
+    "رابعة":"Fourth",
+    "خامسة":"Fifth",
+    "سادس":"Sixth",
+    "سابع":"Seventh",
+    "الثالثة":"Third",
+    "الرابعة":"Fourth",
+    "الثانية":"Second",
+    "الأولى":"First",
+    "مصر":"Egypt",
+    "السعودية":"Saudi Arabia",
+    "الإسكندرية":"Alexandria",
+    "يونيو":"June",
+    "يوليو":"July",
+    "أغسطس":"August",
+    "سبتمبر":"September",
+    "أكتوبر":"October",
+    "نوفمبر":"November",
+    "ديسمبر":"December",
+    "يناير":"January",
+    "فبراير":"February",
+    "مارس":"March",
+    "أبريل":"April",
+    "مايو":"May",
+  };
+
+  // Simple transliteration fallback (to avoid any Arabic letters in EN view)
+  const __TRANS = {
+    "ا":"a","أ":"a","إ":"i","آ":"aa","ء":"'",
+    "ب":"b","ت":"t","ث":"th","ج":"j","ح":"h","خ":"kh",
+    "د":"d","ذ":"dh","ر":"r","ز":"z","س":"s","ش":"sh",
+    "ص":"s","ض":"d","ط":"t","ظ":"z","ع":"‘","غ":"gh",
+    "ف":"f","ق":"q","ك":"k","ل":"l","م":"m","ن":"n",
+    "ه":"h","و":"w","ي":"y","ى":"a","ة":"h","ئ":"y","ؤ":"w","پ":"p","چ":"ch","ڤ":"v","گ":"g"
+  };
+
+  function __transliterateArabic(s){
+    return (s||"").replace(/[\u0600-\u06FF]/g, ch => __TRANS[ch] ?? "");
+  }
+
+  function __applyPhraseMap(s){
+    let out = s;
+    for(const [a,e] of __PHRASE){
+      // global replace (escape regex)
+      const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp(esc, "g"), e);
+    }
+    return out;
+  }
+
+  function __wordMap(s){
+    // Replace standalone words (roughly)
+    return s.replace(/[\u0600-\u06FF]+/g, w => __WORD[w] || w);
+  }
+
+  function translateArToEn(s){
+    if(!s) return s;
+    let out = s;
+    out = __arabicDigitsToLatin(out);
+    out = __applyPhraseMap(out);
+    out = __wordMap(out);
+    // Transliterate any remaining Arabic to guarantee no Arabic letters in EN mode
+    if(__hasArabic(out)) out = __transliterateArabic(out);
+    // Clean spacing
+    out = out.replace(/\s{2,}/g, " ").trim();
+    return out;
+  }
+
+  function translateTextNodes(lang){
+    const toEn = (lang === "en");
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node){
+        const v = (node.nodeValue || "");
+        if(!v.trim()) return NodeFilter.FILTER_REJECT;
+        const p = node.parentElement;
+        if(!p) return NodeFilter.FILTER_REJECT;
+        const tag = p.tagName ? p.tagName.toLowerCase() : "";
+        if(tag === "script" || tag === "style" || tag === "noscript") return NodeFilter.FILTER_REJECT;
+        if(p.closest("script,style,noscript,code,pre")) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    const nodes = [];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+
+    if(toEn){
+      for(const n of nodes){
+        const val = n.nodeValue;
+        if(__hasArabic(val)){
+          if(!__origText.has(n)) __origText.set(n, val);
+          n.nodeValue = translateArToEn(val);
+        }
+      }
+    }else{
+      for(const n of nodes){
+        if(__origText.has(n)){
+          n.nodeValue = __origText.get(n);
+        }
+      }
+    }
+  }
+
+  function applyLang(lang){
+    const root = document.documentElement;
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang === "ar" ? "ar" : "en");
+    root.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+    localStorage.setItem("lang", lang);
+
+    // Update text nodes
+    const dict = i18n[lang] || i18n.ar;
+
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const k = el.getAttribute("data-i18n");
+      if(dict[k]) el.textContent = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+      const k = el.getAttribute("data-i18n-placeholder");
+      if(dict[k]) el.setAttribute("placeholder", dict[k]);
+    });
+
+    
+    translateTextNodes(lang);
+if(langBtn){
+      langBtn.textContent = (lang === "ar") ? "EN" : "AR";
+      langBtn.title = (lang === "ar") ? "Switch to English" : "التبديل للعربية";
+      langBtn.setAttribute("aria-label", langBtn.title);
+    }
+
+    // Update some accessibility labels (optional)
+    const nav = document.querySelector('nav[aria-label]');
+    if(nav) nav.setAttribute("aria-label", lang==="ar" ? "التنقل" : "Navigation");
+    const search = document.querySelector('.search[aria-label]');
+    if(search) search.setAttribute("aria-label", lang==="ar" ? "بحث داخل الصفحة" : "Search within the page");
+  }
+
+  const initial = localStorage.getItem("lang") || "ar";
+  applyLang(initial);
+  langBtn?.addEventListener("click", ()=>{
+    const cur = document.documentElement.getAttribute("data-lang") || "ar";
+    applyLang(cur === "ar" ? "en" : "ar");
+  });
+})();
+
 </script>
 </body>
 </html>
