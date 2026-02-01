@@ -28,7 +28,8 @@
       --line: rgba(255,255,255,.14);
       --accent: #2dd4bf;
       --accent2:#60a5fa;
-      --glow: rgba(45,212,191,.28);
+      --glow: rgba(45, 212, 191, .38);
+      --glowBg: rgba(45, 212, 191, .10);
       --good:#22c55e;
       --warn:#f59e0b;
     }
@@ -41,7 +42,8 @@
       --line: rgba(10, 25, 47, .14);
       --accent: #0ea5e9;
       --accent2:#14b8a6;
-      --glow: rgba(14,165,233,.22);
+      --glow: rgba(14, 165, 233, .35);
+      --glowBg: rgba(14, 165, 233, .08);
       --good:#16a34a;
       --warn:#b45309;
     }
@@ -94,20 +96,7 @@
       font-size:.92rem;
       transition:.2s ease;
     }
-    nav a:hover,
-    nav a:focus-visible{
-      border-color: var(--accent);
-      color:var(--text);
-      background:var(--card2);
-      box-shadow: 0 0 0 3px var(--glow), 0 14px 34px rgba(0,0,0,.22);
-      text-shadow: 0 0 18px var(--glow);
-      filter: drop-shadow(0 0 14px var(--accent));
-      transform: translateY(-1px);
-    }
-    nav a:active{
-      transform: translateY(0);
-      filter: drop-shadow(0 0 10px var(--accent));
-    }
+    nav a:hover{ border-color:var(--line); color:var(--text); background:var(--card2); }
     nav a[aria-current="true"]{ color:var(--text); background:var(--card); border-color:var(--line); }
 
     .actions{ display:flex; gap:8px; align-items:center; justify-content:flex-end; min-width: 220px; }
@@ -377,6 +366,50 @@
       aspect-ratio: 16 / 9;
     }
 
+    /* Glow interactions (menus + headings + lists) */
+    @media (hover:hover) and (pointer:fine){
+      /* Menus / buttons / chips */
+      nav a:hover, nav a:focus-visible,
+      .btn:hover, .btn:focus-visible,
+      .chips a:hover, .chips a:focus-visible,
+      .pill:hover, .pill:focus-visible{
+        border-color: var(--accent);
+        color: var(--text);
+        background: var(--card2);
+        box-shadow: 0 0 0 3px var(--glow), 0 14px 34px rgba(0,0,0,.22);
+        text-shadow: 0 0 18px var(--glow);
+        filter: drop-shadow(0 0 14px var(--accent));
+        transform: translateY(-1px);
+      }
+      nav a:active, .btn:active, .chips a:active, .pill:active{
+        transform: translateY(0);
+        filter:none;
+      }
+
+      /* Headings (main + sub) */
+      h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+      .title:hover,
+      details summary:hover,
+      h1:focus-visible, h2:focus-visible, h3:focus-visible, h4:focus-visible, h5:focus-visible, h6:focus-visible,
+      .title:focus-visible,
+      details summary:focus-visible{
+        outline:none;
+        text-shadow: 0 0 26px var(--glow);
+        filter: drop-shadow(0 0 12px var(--accent));
+      }
+
+      /* Lists */
+      .list li{
+        border-radius: 12px;
+        padding: 6px 10px;
+        transition: .18s ease;
+      }
+      .list li:hover{
+        background: var(--glowBg);
+        box-shadow: 0 0 0 2px var(--glow);
+      }
+    }
+    
 </style>
 </head>
 
@@ -1225,6 +1258,17 @@
     findBtn?.addEventListener('click', ()=> highlightFirst(q.value.trim()));
     q?.addEventListener('keydown', (e)=>{ if(e.key==='Enter') highlightFirst(q.value.trim()); });
 
+  
+    // makeFocusableHeadings: allow keyboard focus glow on headings/summaries without changing content
+    (function makeFocusableHeadings(){
+      try{
+        const sel = 'h1,h2,h3,h4,h5,h6,details summary,.title';
+        document.querySelectorAll(sel).forEach(el=>{
+          if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','0');
+        });
+      }catch(e){}
+    })();
+    
   })();
   
 
